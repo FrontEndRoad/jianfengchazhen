@@ -1,0 +1,172 @@
+/* -------------------------------------------------------------
+	@ 名称：移动端基础样式
+	@ 版本：v1.0
+	@ 作者：cici
+	@ 时间：2015/10/15
+*/
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+html, body { height: 100%; overflow: hidden; }
+body { margin: 0; position: relative; font-family: Microsoft Yahei; -webkit-text-size-adjust: 100%; }
+p, h1, h2, h3, form, dl, dd, table { margin: 0; }
+ul, ol { padding: 0; margin: 0; }
+li { list-style: none; }
+a, img { -webkit-touch-callout: none; }
+img { border: none; vertical-align: middle; /* pointer-events: none; -webkit-user-select: none; -webkit-touch-callout: none;  */ }
+a { text-decoration: none; border: none; }
+input, textarea { font-family: Microsoft Yahei; font-size: 18px; }
+:focus { outline: 0; border: none; color: rgba(0, 0, 0, 0); }
+::-webkit-input-placeholder { /* WebKit browsers */
+color: #FFE9B2; }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #FFE9B2; }
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #FFE9B2; }
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+color: #FFE9B2; }
+
+.fl { float: left; }
+.fr { float: right; }
+.clearfix:after { display: block; height: 1%; line-height: 0; font-size: 0; visibility: hidden; clear: both; content: ''; }
+.clearfix { zoom: 1; }
+.tc { text-align: center; }
+.tr { text-align: right; }
+.none { display: none; }
+.pr { position: relative; }
+.pa { position: absolute; }
+.pf { position: fixed; }
+
+	
+
+/* 主体内容 */
+.mBg { width: 100%; height: 100%; }
+.arr { width: 56px; position: absolute; bottom: 50px; left: 50%; margin-left: -28px; z-index: 99; }
+
+.wrap { width: 100%; height: 100%; position: relative; overflow: hidden; }
+	.page { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; display: none; text-align: center; }
+	.current { z-index: 10; display: block; }
+
+	
+.game { background: #9B0801 url(../images/game.jpg) no-repeat center top; }
+	.num { top: 382px; left: 0; z-index: 5; width: 100%; text-align: center; font-size: 22px; }
+		.tyNum { color: #f50; }
+	.shuibo { width: 437px; height: 437px; background: url(../images/shuibo.png) no-repeat 0 0; top: 171px; left: 50%; margin-left: -214px; }
+	.tar { top: 203px; left: 50%; width: 370px; height: 370px; margin-left: -182px; border-radius: 100%; background: rgba(23,34,45,.0); }
+		.item { position: absolute; top: 50%; left: 50%; width: 100%; height: 1px; -webkit-transform-origin:0% 50%; transform-origin:0% 50%; }
+		.item.on { background: url(../images/bo.png) no-repeat center; }
+		.item img { width: 68px; height: 68px; border-radius: 100%; }
+	.time { top: 660px; left: 50%; text-align: center; width: 135px; height: 55px; margin-left: -67px; background: url(../images/timeBg.png) no-repeat center top; font-size: 0; }
+		.ts  { position: absolute; display: inline-block; width: 50px; height: 55px; background: rgba(34,23,42,.0); font-size: 26px; color: #fff; line-height: 40px; letter-spacing: 12px; }
+		.ts1 { left: 0; padding-left: 9px; }
+		.ts2 { right: 8px; }
+		.dot { vertical-align: -12px; margin: 0 2px; }
+	.tishi { top: 725px; left: 0; width: 100%; text-align: center; font-size: 18px; color: #f8d09b; }
+	.pai { bottom: -130px; left: 50%; margin-left: -80px; z-index: 3; }
+	.ty { width: 100px; height: 100px; border-radius: 100%; bottom: 126px; left: 50%; margin-left: -50px; z-index: 3; -webkit-transform: scale(1.2, 1.2); transform: scale(1.2, 1.2); }
+	.hand { bottom: 65px; left: 333px; z-index: 3; width: 100px; z-index: 5; }
+	.p2_bot { bottom: -30px; left: 0; }
+	
+
+
+
+
+/* 弹框类 */
+.tk { width: 100%; height: 100%; background: rgba(0, 0, 0, .7); position: absolute; top: 0; left: 0; z-index: 999; display: none; color: #fff; text-align: center; }
+	.close { display: inline-block; width: 50px; height: 50px; position: absolute; top: 4%; right: 6%; z-index: 1000; background: rgba(213,34,54,.0); }
+	.tkIn { width: 100%; height: 700px; }
+
+.tk-suc { }
+	.tsTime { top: 465px; left: 196px; font-size: 40px; color: #fff; display: inline-block; width: 80px; height: 50px; }
+.tk-suc a,.tk-err a { display: inline-block; height: 70px; position: absolute;  background: rgba(23,5,45,.0); }
+	.restartBtn { width: 187px; top: 640px; left: 239px; }
+
+.tk-err { }
+.tk-err .restartBtn { top: 620px; }
+.tk-err .shareBtn { top: 620px; }
+.tk-err .rankBtn { top: 746px; }
+
+
+
+
+/* =================css3动画================= */
+.shortLon { -webkit-animation:shortLon .2s; animation:shortLon .2s; }
+@-webkit-keyframes shortLon{
+	0% {-webkit-transform:translate3d(0,0,0) scale(0.8,0.8); }
+	100% {-webkit-transform:translate3d(0,-400px,0) scale(0.8,0.8); opacity: .5; }
+}
+@keyframes shortLon{
+	0% {transform:translate3d(0,0,0) scale(0.8,0.8); }
+	100% {transform:translate3d(0,-400px,0) scale(0.8,0.8); opacity: .5; }
+}
+
+
+.boAni {-webkit-animation:boAni 1s steps(7) infinite;animation:boAni 1s steps(7) infinite; }
+@-webkit-keyframes boAni{
+	100% { background-position: -3059px 0; }
+}
+@keyframes boAni{
+	100% { background-position: -3059px 0; }
+}
+}
+
+.zoomIn{-webkit-animation:zoomIn .2s ease both;animation:zoomIn .2s ease both}
+/* zoomIn */
+@-webkit-keyframes zoomIn{
+	0%{opacity:0;-webkit-transform:scale3d(.1,.1,.1)}
+	100%{opacity:1}
+}
+@keyframes zoomIn{
+	0%{opacity:0;transform:scale3d(.1,.1,.1)}
+	100%{opacity:1}
+}
+
+
+
+/* 闪进 */
+.fadeIn{-webkit-animation:fadeIn .6s ease-in-out both;animation:fadeIn .6s ease-in-out both}
+@keyframes fadeIn{
+	0%{transform:scale(0);opacity:0;transform:translate3d(0,0,0)}
+	60%{transform:scale(1.1)}
+	80%{transform:scale(.9);opacity:1}
+	100%{transform:scale(1);opacity:1}
+}
+@-webkit-keyframes fadeIn{
+	0%{-webkit-transform:scale(0);transform:translate3d(0,0,0);opacity:0}
+	60%{-webkit-transform:scale(1.1)}
+	80%{-webkit-transform:scale(.9);opacity:1}
+	100%{-webkit-transform:scale(1);opacity:1}
+}
+
+
+/* 大小不间断 */
+.pulse{-webkit-animation:pulse 1.5s ease infinite both;animation:pulse 1.5s ease infinite both}
+@-webkit-keyframes pulse{
+	0%,100%{-webkit-transform:scale3d(1,1,1)}
+	50%{-webkit-transform:scale3d(1.05,1.05,1.05)}
+}
+@keyframes pulse{
+	0%,100%{transform:scale3d(1,1,1)}
+	50%{transform:scale3d(1.05,1.05,1.05)}
+}
+
+
+/* 点我手形 */
+.handdot{-webkit-animation:handdot .5s both infinite;animation:handdot .5s both infinite}
+@-webkit-keyframes handdot{
+	0%{opacity:1;-webkit-transform:scale3d(2,2,2) translate(-10px,-10px)}
+	100%{opacity:1;-webkit-transform:scale3d(1,1.1,1) translate(0,0)}
+}
+@keyframes handdot{
+	0%{opacity:1;transform:scale3d(2,2,2) translate(-10px,-20px)}
+	100%{opacity:1;transform:scale3d(1,1.1,1) translate(0,0)}
+}
+
+/* 明暗 */
+.opacity{-webkit-animation:opacity 1s ease infinite both;animation:opacity 1s ease infinite both}
+@keyframes opacity{
+	0%,100%{opacity:.5}
+	50%{opacity:1}
+}
+@-webkit-keyframes opacity{
+	0%,100%{opacity:.5}
+	50%{opacity:1}
+}
